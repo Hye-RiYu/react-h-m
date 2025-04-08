@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+}
+
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px;
+}
+
+.login-button div {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-list li:hover {
+  color: red;
+}
+
+.menu-input {
+  border-bottom: 1px solid black;
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+}
+
+.menu-input input {
+  border-style: none;
+}
+
+.menu-input input:focus {
+  outline: none;
+}
