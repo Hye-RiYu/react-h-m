@@ -6,12 +6,12 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 10px 20px;
+  cursor: pointer;
 }
 
 .login-button div {
   margin-left: 10px;
   font-size: 0.9rem;
-  cursor: pointer;
 }
 
 .nav-section {
@@ -22,7 +22,8 @@ body {
 .menu-area {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  margin-bottom: 1.8rem;
 }
 
 .menu-list {
@@ -43,7 +44,7 @@ body {
 .menu-input {
   border-bottom: 1px solid black;
   position: absolute;
-  right: 20px;
+  right: 120px;
   padding: 5px;
 }
 
@@ -53,4 +54,48 @@ body {
 
 .menu-input input:focus {
   outline: none;
+}
+
+.product-card {
+  margin-bottom: 1.6rem;
+}
+
+.product-card:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.product-img {
+  width: 300px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card div {
+  margin-bottom: 0.1rem;
+}
+
+.product-conscious {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.product-title, .product-price {
+  font-size: 0.9rem;
+}
+
+.product-new {
+  font-size: 0.7rem;
+}
+
+.login-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 40%;
+}
+
+.form-label {
+  font-size: 0.8rem;
 }
