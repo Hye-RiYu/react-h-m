@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router';
+import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ authenticate, setAuthenticate }) => {
   const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성'];
+  let [width, setWidth] = useState(0);
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  useEffect(() => {
+    // authenticate 상태가 변경될 때마다 실행되는 로직
+    // 필요에 따라 추가적인 처리를 여기에 작성할 수 있습니다.
+  }, [authenticate]);
 
-  const goToLogin = () => {
-    navigate('/login')
-  }
+  const handleAuthClick = () => {
+    if (authenticate) {
+      setAuthenticate(false);
+    } else {
+      navigate('/login');
+    }
+  };
 
   const search = (event) => {
     if (event.key === "Enter") {
@@ -26,10 +35,23 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <div className='login-button' onClick={goToLogin}>
-          <FontAwesomeIcon icon={faUser} />
-          <div>로그인</div>
-        </div>
+          <div className="side-menu" style={{ width: width }}>
+            <button className="closebtn" onClick={() => setWidth(0)}>
+              &times;
+            </button>
+            <div className="side-menu-list" id="menu-list">
+              {menuList.map((menu, index) => (
+                <button key={index}>{menu}</button>
+              ))}
+            </div>
+          </div>
+          <div className='login-button' onClick={handleAuthClick}>
+            <div className="burger-menu hide">
+              <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
+            </div>
+            <FontAwesomeIcon icon={faUser} />
+            <div>{authenticate ? '로그아웃' : "로그인"}</div>
+          </div>
       </div>
       <div className='nav-section'>
         <Link to='/'>

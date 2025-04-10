@@ -21,10 +21,10 @@ const ProductDetail = () => {
   return (
     <Container>
       <Row>
-        <Col className='product-detail'>
+        <Col xs={12} md={6} className='product-detail'>
           <img className='product-detail-img' src={product?.img} alt={product?.title} />
         </Col>
-        <Col className='product-detail-info'>
+        <Col xs={12} md={6} className='product-detail-info'>
           <div className='product-detail-title'>{product?.title}</div>
           <div className='product-detail-price'>₩{product?.price}</div>
           <div className='product-conscious'>{product?.new === true ? "Conscious choice" : ""}</div>
