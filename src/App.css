@@ -66,7 +66,7 @@ body {
 }
 
 .product-img {
-  width: 300px;
+  width: 100%;
   margin-bottom: 0.5rem;
 }
 
@@ -98,4 +98,34 @@ body {
 
 .form-label {
   font-size: 0.8rem;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: end;
+}
+
+.product-detail-img {
+  width: 70%;
+}
+
+.product-detail-info {
+  padding: 4rem;
+}
+
+.product-detail-title {
+  font-size: 1.4rem;
+}
+
+.product-detail-price {
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.drop-down {
+  margin: 0.8rem 0;
+}
+
+.add-button {
+  width: 50%;
 }
