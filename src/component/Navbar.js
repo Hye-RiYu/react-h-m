@@ -49,14 +49,16 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             <div className="burger-menu hide">
               <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
             </div>
-            <FontAwesomeIcon icon={faUser} />
-            <div>{authenticate ? '로그아웃' : "로그인"}</div>
+              <div>
+                <FontAwesomeIcon icon={faUser} className='login' />
+                {authenticate ? '로그아웃' : "로그인"}
+              </div>
           </div>
       </div>
       <div className='nav-section'>
         <Link to='/'>
           <img
-          width={100}
+          width={90}
           src='https://images.seeklogo.com/logo-png/6/2/hm-logo-png_seeklogo-64496.png' alt='logo' />
         </Link>
       </div>

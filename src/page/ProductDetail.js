@@ -19,7 +19,7 @@ const ProductDetail = () => {
   },[])
 
   return (
-    <Container>
+    <Container className='detail-container'>
       <Row>
         <Col xs={12} md={6} className='product-detail'>
           <img className='product-detail-img' src={product?.img} alt={product?.title} />
