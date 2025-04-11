@@ -45,11 +45,11 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
               ))}
             </div>
           </div>
-          <div className='login-button' onClick={handleAuthClick}>
+          <div className='login-button'>
             <div className="burger-menu hide">
               <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
             </div>
-              <div>
+              <div onClick={handleAuthClick}>
                 <FontAwesomeIcon icon={faUser} className='login' />
                 {authenticate ? '로그아웃' : "로그인"}
               </div>
